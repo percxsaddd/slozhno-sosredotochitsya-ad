@@ -1,82 +1,44 @@
-
-
 .page.theme_light {
-  background: url('/images/cover-image-light.png'), var(--background-main-color);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  --title-color: #FFC2E6;
+  --text-color: #353430;
+  --sub-text-color: #353430;
+  --accent-color: #ff8dcb;
+  --btn-color:#353430;
+  --backgroung-image: url(../images/cover-image-light.png);
 }
 
-
-.theme_light {
-  --background-main-color: #FFF1F7;
-  --background-second-color: #FF8DCB;
-  --title-color-effect: #FFC2E6;
-  --title-color-sub-effect: #FF0070;
-  --text-menu-color: #353430;
-  --text-title-color: #353430;
-  --text-description-color: #353430;
-  --text-main-color: #353430;
-  --hover-color: #353430;
-  --main-font-family: "IBM Plex Mono", 'monospace';
-  --footer-title-sub-low-effect: #FF8DCB;
-  --decorate-color: #353430;
-  --text-subtitle-color: #353430;
-}
-
-@media (prefers-color-scheme: light) {
-  .page {
-    background: url('/images/cover-image-light.png'), var(--background-main-color);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .theme_auto {
-    --background-main-color: #FFF1F7;
-    --background-second-color: #FF8DCB;
-    --title-color-effect: #FFC2E6;
-    --title-color-sub-effect: #FF0070;
-    --text-menu-color: #353430;
-    --text-title-color: #353430;
-    --text-description-color: #353430;
-    --text-main-color: #353430;
-    --hover-color: #353430;
-    --main-font-family: "IBM Plex Mono", 'monospace';
-    --footer-title-sub-low-effect: #FF8DCB;
-    --decorate-color: #353430;
-    --text-subtitle-color: #353430;
-  }
-
-  .header_rec_point {
-    display: none;
-  }
-
-  .theme_dark>.header>.header_rec_point {
-    display: block;
-  }
-}
-
-.header_rec_point {
+.theme_light .decorative__element {
   display: none;
 }
 
-@media (1024px >=width) {
-  .header_title {
-    text-shadow: 4px 4px 0px var(--title-color-sub-effect);
-  }
-
-  .footer_title {
-    text-shadow: 2px 2px 0px var(--title-color-sub-effect);
-  }
+.theme_light .header__theme-menu-button:hover {
+  border: 1px solid rgba(50, 49, 45, 0.40);
 }
 
-@media (width < 1024px) {
-  .header_title {
-    text-shadow: 4px 4px 0px var(--footer-title-sub-low-effect);
+@media (prefers-color-scheme: light) {
+  :root {
+    --title-color: #FFC2E6;
+    --text-color: #353430;
+    --sub-text-color: #353430;
+    --accent-color: #ff8dcb;
+    --btn-color:#353430;
+    --backgroung-image: url(../images/cover-image-light.png);
   }
+  .decorative__element {
+    display: none;
+  }
+  
+  .header__theme-menu-button:hover {
+    border: 1px solid rgba(50, 49, 45, 0.40);
+  }
+}  
 
-  .footer_title {
-    text-shadow: 2px 2px 0px var(--footer-title-sub-low-effect);
+
+@media (min-width: 1024px) {
+  .header__title {
+    text-shadow: 4px 4px 0 #FF0070;
+  }
+  .footer__title {
+    text-shadow: 4px 4px 0 #FF0070;
   }
 }
